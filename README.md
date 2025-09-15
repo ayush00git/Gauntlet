@@ -1,60 +1,12 @@
-📌 Problem Statement 27 – Herbs Geotagging
+# React + Vite
 
-Domain: Agriculture / Clean & Green Tech
-Type: Software
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-🔹 What It Means
+Currently, two official plugins are available:
 
-The challenge is to build a system (app + platform) that can:
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-Geotag herbs – record the exact GPS location where medicinal herbs/plants are found or cultivated.
+## Expanding the ESLint configuration
 
-Database creation – maintain details like:
-
-Herb species
-
-Location (latitude/longitude)
-
-Growth conditions (soil, climate, altitude)
-
-Photographic evidence (images of the herb)
-
-Visualization – show this data on a map for research, conservation, and commercial purposes.
-
-🔹 Why It’s Needed
-
-India has a rich diversity of medicinal herbs but no centralized geospatial record.
-
-Helps Ayush / pharma industries in sourcing authentic herbs.
-
-Supports farmers and conservationists by preventing overharvesting and illegal trade.
-
-Enables scientific research on regional distribution of herbs.
-
-🔹 Tech Involvement
-
-Web/Mobile app for field data collection (farmers, researchers can upload info).
-
-Geotagging via GPS (mobile device sensors).
-
-AI/ML (optional add-on):
-
-Herb identification from images (using computer vision).
-
-Predicting suitable regions for specific herbs based on climate/soil data.
-
-Dashboard:
-
-Map-based visualization (Google Maps / Mapbox).
-
-Search & filter herbs by region, type, or medicinal use.
-
-🔹 Example Flow
-
-A farmer in Himachal finds a rare medicinal herb.
-
-Using the app, he clicks a photo → AI model identifies it as Ashwagandha.
-
-GPS coordinates get attached automatically.
-
-Data uploads to the central system → visible on a dashboard map for researchers & authorities.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
