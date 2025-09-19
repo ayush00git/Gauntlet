@@ -1,5 +1,5 @@
 import React from 'react';
-import { AlertTriangle, CheckCircle, Globe, Users, Beaker, Leaf, QrCode, Shield, Award, FlaskConical } from 'lucide-react';
+import { AlertTriangle, CheckCircle, Globe, Users, Beaker, Leaf, QrCode, Shield, Award, FlaskConical, MapPin, TreePine } from 'lucide-react';
 
 const ProblemSolvedSection = () => {
   const sections = [
@@ -44,6 +44,20 @@ const ProblemSolvedSection = () => {
       },
       imageLeft: true,
       illustration: "lab-testing"
+    },
+    {
+      id: 4,
+      title: "Endangered Herb Conservation",
+      problem: {
+        text: "Private farmers and wild collectors harvest endangered herbs without any tracking system. We have no visibility into which species are being over-harvested or where they're being collected from.",
+        icon: AlertTriangle
+      },
+      solution: {
+        text: "Through geo-tagging technology, we now track the exact GPS location of every herb collection. This enables authorities to monitor endangered species harvesting and take immediate action to prevent over-exploitation.",
+        icon: CheckCircle
+      },
+      imageLeft: false,
+      illustration: "geo-tracking"
     }
   ];
 
@@ -187,6 +201,71 @@ const ProblemSolvedSection = () => {
     </div>
   );
 
+  const GeoTrackingIllustration = () => (
+    <div className="relative w-full h-80 bg-gradient-to-br from-green-50 to-emerald-100 rounded-3xl overflow-hidden">
+      {/* Mountain/forest background */}
+      <div className="absolute inset-0">
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-green-300 to-green-200 opacity-60"></div>
+        <div className="absolute bottom-20 left-8 w-16 h-16 bg-green-400 rounded-full opacity-40"></div>
+        <div className="absolute bottom-16 right-12 w-20 h-20 bg-green-500 rounded-full opacity-30"></div>
+        <div className="absolute top-12 left-1/4 w-12 h-12 bg-emerald-400 rounded-full opacity-50"></div>
+      </div>
+      
+      {/* Endangered herbs */}
+      <div className="absolute top-1/4 left-1/6">
+        <div className="bg-white rounded-xl p-3 shadow-lg border-2 border-red-300">
+          <TreePine className="w-8 h-8 text-red-600 mb-1" />
+          <div className="text-xs font-semibold text-red-700">Endangered</div>
+        </div>
+      </div>
+      
+      <div className="absolute top-2/3 right-1/4">
+        <div className="bg-white rounded-xl p-3 shadow-lg border-2 border-red-300">
+          <Leaf className="w-8 h-8 text-red-600 mb-1 transform -rotate-12" />
+          <div className="text-xs font-semibold text-red-700">Protected</div>
+        </div>
+      </div>
+      
+      {/* GPS tracking points */}
+      <div className="absolute top-1/3 left-1/3 bg-blue-500 rounded-full p-2 shadow-lg animate-pulse">
+        <MapPin className="w-4 h-4 text-white" />
+      </div>
+      <div className="absolute bottom-1/3 right-1/3 bg-blue-500 rounded-full p-2 shadow-lg animate-pulse">
+        <MapPin className="w-4 h-4 text-white" />
+      </div>
+      
+      {/* Central monitoring dashboard */}
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <div className="bg-white rounded-2xl p-4 shadow-xl border border-emerald-200">
+          <Globe className="w-10 h-10 text-emerald-600 mb-2 mx-auto" />
+          <div className="text-xs font-bold text-emerald-700 text-center">Live Tracking</div>
+          <div className="flex items-center justify-center gap-1 mt-2">
+            <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+            <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+            <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+          </div>
+        </div>
+      </div>
+      
+      {/* Warning zone indicator */}
+      <div className="absolute bottom-8 left-8 bg-red-500 text-white px-3 py-2 rounded-full text-sm font-medium flex items-center gap-2 shadow-lg">
+        <AlertTriangle className="w-4 h-4" />
+        Restricted Zone
+      </div>
+      
+      {/* Geo-fence visualization */}
+      <div className="absolute top-8 right-8 w-20 h-20 border-4 border-dashed border-emerald-400 rounded-full flex items-center justify-center">
+        <div className="w-8 h-8 border-2 border-emerald-600 rounded-full"></div>
+      </div>
+      
+      {/* Coordinates display */}
+      <div className="absolute top-12 left-12 bg-white rounded-lg p-2 shadow-md text-xs font-mono">
+        <div className="text-gray-600">28.6139° N</div>
+        <div className="text-gray-600">77.2090° E</div>
+      </div>
+    </div>
+  );
+
   const renderIllustration = (type) => {
     switch (type) {
       case 'global-trade':
@@ -195,6 +274,8 @@ const ProblemSolvedSection = () => {
         return <FarmersIllustration />;
       case 'lab-testing':
         return <LabTestingIllustration />;
+      case 'geo-tracking':
+        return <GeoTrackingIllustration />;
       default:
         return <GlobalTradeIllustration />;
     }
