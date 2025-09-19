@@ -52,7 +52,7 @@ const AshwagandhaTraceability = () => {
 
       status: "passed",
 
-      reportLink: "#test-report-pdf"
+      reportLink: "/files/Ashwagandha_Lab_Report.pdf"
 
     },
 
@@ -450,11 +450,13 @@ const AshwagandhaTraceability = () => {
 
                         className="inline-flex items-center text-purple-600 hover:text-purple-800 font-medium"
 
+                        download
+
                       >
 
                         <FileText className="w-4 h-4 mr-2" />
 
-                        View Full Test Report
+                        View & Download Full Test Report
 
                       </a>
 
