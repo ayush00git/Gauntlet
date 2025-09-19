@@ -622,6 +622,16 @@ const FarmerSignupForm = () => {
             </div>
           </div>
 
+          {/* QR Button */}
+          <div className="text-center mt-4">
+            <button
+              onClick={() => navigate('/342er3')}
+              className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl shadow-lg transition-all duration-200 font-medium text-lg"
+            >
+              QR
+            </button>
+          </div>
+
           {/* Footer */}
           <div className="text-center mt-6">
             <p className="text-sm text-gray-500">
