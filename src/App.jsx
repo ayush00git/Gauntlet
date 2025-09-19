@@ -24,8 +24,7 @@ function App() {
         <Route path="/farmerPanel/login" element={<FarmerSignupForm />} />
         <Route path="/farmerPanel/farmerStage" element={<NewPage />} />
         <Route path="/middlemanPanel" element={<HerbalSupplyChainMiddleman />} />
-        {/* // QR code */}
-        <Route path="/product/ashwagandaCapsules/342er3" element={<AshwagandhaTraceability />} />
+        <Route path="/product/342er3" element={<AshwagandhaTraceability />} />
       </Routes>
     </Router>
   );
