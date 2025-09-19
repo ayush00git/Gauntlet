@@ -1,4 +1,4 @@
-import HerbJourney from "../Components/Flow"
+import HerbJourney from "../Components/HerbJourney"
 import Homepage from "../Components/Homepage"
 import ProblemSolvedSection from "../Components/Problem"
 
@@ -6,7 +6,6 @@ import ProblemSolvedSection from "../Components/Problem"
 function App() {
   return(
     <>
-      <Homepage />
       <HerbJourney />
       <ProblemSolvedSection />
     </>
